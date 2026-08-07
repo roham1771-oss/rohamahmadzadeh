@@ -1,0 +1,329 @@
+{
+  "common": {
+    "siteName": "Vakil Ahmadzadeh",
+    "attorneyName": "Roham Ahmadzadeh",
+    "attorneyTitle": "Attorney at Law",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "workingHours": "Working Hours",
+    "workingHoursValue": "Saturday to Wednesday, 9 AM to 5 PM",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "filter": "Filter",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "all": "All",
+    "noResults": "No results found",
+    "required": "Required",
+    "optional": "Optional",
+    "or": "or",
+    "and": "and",
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "articles": "Articles",
+    "contact": "Contact Us",
+    "faq": "FAQ",
+    "portal": "Client Portal",
+    "admin": "Admin Panel",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "profile": "Profile",
+    "language": "Language",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "copyLink": "Copy Link",
+    "share": "Share",
+    "download": "Download",
+    "print": "Print",
+    "exportPDF": "Export PDF",
+    "subscribe": "Subscribe to Newsletter",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Stay updated with the latest legal news and articles",
+    "emailPlaceholder": "Enter your email",
+    "cookieNotice": "This website uses cookies to improve user experience",
+    "acceptCookies": "Accept Cookies",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "allRightsReserved": "All rights reserved"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Legal Services",
+    "articles": "Legal Articles",
+    "contact": "Contact Us",
+    "faq": "FAQ",
+    "calculators": "Calculators",
+    "legalAid": "Legal Consultation",
+    "clientPortal": "Client Portal"
+  },
+  "home": {
+    "hero": {
+      "title": "Roham Ahmadzadeh",
+      "subtitle": "Attorney at Law",
+      "description": "With Attorney at Law Roham Ahmadzadeh, benefit from professional expertise in legal disputes including property cases, gardens, Article 100 Commission, Article 77, and other litigations.",
+      "cta": "Free Consultation",
+      "ctaSecondary": "View Services"
+    },
+    "tagline": "Guarding Rights, Defending Based on Law",
+    "stats": {
+      "experience": "Years Experience",
+      "cases": "Successful Cases",
+      "clients": "Satisfied Clients",
+      "awards": "Awards"
+    },
+    "services": {
+      "title": "Areas of Practice",
+      "subtitle": "Comprehensive Legal Services Across All Fields"
+    },
+    "whyUs": {
+      "title": "Why Choose Us",
+      "subtitle": "Expertise, Commitment, and Documented Analysis",
+      "experience": "Legal Expertise",
+      "experienceDesc": "Deep experience and knowledge in various legal fields including criminal, family, and commercial law.",
+      "commitment": "Commitment to Justice",
+      "commitmentDesc": "Adherence to ethical principles and effort to defend clients' rights with seriousness and precision.",
+      "confidentiality": "Confidentiality",
+      "confidentialityDesc": "Full adherence to the principle of secrecy and confidentiality",
+      "results": "Documented Analysis",
+      "resultsDesc": "Converting information into documented and reliable legal analyses to achieve desired results"
+    },
+    "cta": {
+      "title": "Protecting Your Rights",
+      "subtitle": "For consultation and more information, contact us and secure your rights.",
+      "button": "Free Consultation"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Meet Attorney Roham Ahmadzadeh",
+    "biography": "Biography",
+    "biographyText": "Attorney Roham Ahmadzadeh, Attorney at Law, provides services with mastery of laws and experience in various legal fields. His legal services are based on precision, responsibility, and adherence to professional principles.",
+    "education": "Education",
+    "experience": "Professional Experience",
+    "specializations": "Specializations",
+    "approach": "Our Approach",
+    "approachText": "Every case has its own unique characteristics, circumstances, and challenges, and a single solution cannot be applied to all disputes. Our approach is based on careful examination of the facts of the case, documented analysis of laws and judicial precedents, honest advice, and selection of the most effective legal path. We strive to ensure that decisions are informed and reality-based through transparency, accountability, and protecting the client's interests.",
+    "values": "Our Values",
+    "integrity": "Integrity",
+    "excellence": "Excellence in Service",
+    "respect": "Client Respect",
+    "transparency": "Transparency"
+  },
+  "services": {
+    "title": "Legal Services",
+    "subtitle": "Professional Legal Services",
+    "consultation": "Legal Consultation",
+    "civil": "Civil Law",
+    "criminal": "Criminal Law",
+    "family": "Family Law",
+    "commercial": "Commercial Law",
+    "property": "Property Law",
+    "labor": "Labor Law",
+    "administrative": "Administrative Law",
+    "international": "International Law",
+    "consultNow": "Consult Now",
+    "viewDetails": "View Details"
+  },
+  "articles": {
+    "title": "Legal Articles",
+    "subtitle": "Latest Legal Articles and Analysis",
+    "categories": "Categories",
+    "allArticles": "All Articles",
+    "latestArticles": "Latest Articles",
+    "relatedArticles": "Related Articles",
+    "shareArticle": "Share Article",
+    "readingTime": "Reading Time",
+    "publishedAt": "Published",
+    "author": "Author",
+    "tableOfContents": "Table of Contents",
+    "tags": "Tags",
+    "comments": "Comments",
+    "noArticles": "No articles found"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to answer your legal questions",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "practiceArea": "Area of Interest",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully",
+      "error": "Error sending message"
+    },
+    "info": {
+      "address": "Office Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Working Hours"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to Common Legal Questions",
+    "noFaq": "No questions found"
+  },
+  "calculators": {
+    "title": "Legal Calculators",
+    "subtitle": "Useful Tools for Legal Calculations",
+    "courtFee": "Court Fee Calculator",
+    "delayDamages": "Delay Damages Calculator",
+    "attorneyFee": "Attorney Fee Estimator",
+    "dateConversion": "Date Conversion",
+    "calculate": "Calculate",
+    "result": "Result",
+    "reset": "Reset"
+  },
+  "portal": {
+    "title": "Client Portal",
+    "welcome": "Welcome",
+    "dashboard": "Dashboard",
+    "cases": "My Cases",
+    "appointments": "My Appointments",
+    "documents": "My Documents",
+    "invoices": "Invoices",
+    "messages": "Messages",
+    "notifications": "Notifications",
+    "profile": "My Profile",
+    "uploadDocument": "Upload Document",
+    "caseStatus": "Case Status",
+    "upcomingAppointments": "Upcoming Appointments",
+    "recentActivity": "Recent Activity",
+    "noCases": "No cases registered",
+    "noAppointments": "No appointments scheduled",
+    "noDocuments": "No documents uploaded",
+    "noInvoices": "No invoices found"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "dashboard": "Admin Dashboard",
+    "clients": "Client Management",
+    "cases": "Case Management",
+    "articles": "Article Management",
+    "services": "Service Management",
+    "appointments": "Appointment Management",
+    "documents": "Document Management",
+    "invoices": "Invoice Management",
+    "tasks": "Task Management",
+    "calendar": "Calendar",
+    "notes": "Notes",
+    "settings": "System Settings",
+    "users": "User Management",
+    "audit": "Audit Log",
+    "contactMessages": "Contact Messages",
+    "newsletter": "Newsletter",
+    "search": "Search",
+    "stats": {
+      "totalClients": "Total Clients",
+      "activeCases": "Active Cases",
+      "monthlyRevenue": "Monthly Revenue",
+      "pendingTasks": "Pending Tasks"
+    }
+  },
+  "ai": {
+    "title": "AI Legal Assistant",
+    "subtitle": "Automated answers to general legal questions",
+    "disclaimer": "Note: AI responses are for informational purposes only and do not replace professional legal advice.",
+    "placeholder": "Type your legal question...",
+    "send": "Send",
+    "thinking": "Processing...",
+    "escalate": "Escalate to Attorney",
+    "history": "Chat History",
+    "newChat": "New Chat"
+  },
+  "auth": {
+    "login": {
+      "title": "Sign In",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot your password?",
+      "submit": "Sign In",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Register",
+      "error": "Invalid email or password"
+    },
+    "register": {
+      "title": "Register",
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Register",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Sign In"
+    },
+    "forgotPassword": {
+      "title": "Password Recovery",
+      "email": "Enter your email",
+      "submit": "Send Recovery Link",
+      "success": "Recovery link has been sent to your email"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Vakil Ahmadzadeh | Attorney at Law | Roham Ahmadzadeh",
+      "description": "Guarding Rights, Defending Based on Law - Roham Ahmadzadeh Attorney at Law. Legal consultation and services in criminal, family, civil, and property litigation.",
+      "keywords": "attorney, lawyer, legal consultation, Roham Ahmadzadeh, Vakil Ahmadzadeh, criminal law, family law, property law"
+    },
+    "about": {
+      "title": "About Us | Ahmadzadeh Law Office",
+      "description": "Learn about Roham Ahmadzadeh and the professional team at Ahmadzadeh Law Office"
+    },
+    "services": {
+      "title": "Legal Services | Ahmadzadeh Law Office",
+      "description": "Expert legal services including consultation, representation, and legal document preparation"
+    },
+    "articles": {
+      "title": "Legal Articles | Ahmadzadeh Law Office",
+      "description": "Latest legal articles and analysis by experienced attorneys at Ahmadzadeh Law Office"
+    },
+    "contact": {
+      "title": "Contact Us | Ahmadzadeh Law Office",
+      "description": "Contact Ahmadzadeh Law Office for legal consultation"
+    },
+    "faq": {
+      "title": "FAQ | Ahmadzadeh Law Office",
+      "description": "Answers to frequently asked legal questions"
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Invalid email address",
+    "phone": "Invalid phone number",
+    "passwordMin": "Password must be at least 8 characters",
+    "passwordMatch": "Passwords do not match",
+    "nationalId": "Invalid national ID",
+    "minChars": "Minimum {min} characters required",
+    "maxChars": "Maximum {max} characters allowed"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "serverError": "Server error",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "You do not have permission to access this section",
+    "goHome": "Back to Home"
+  }
+}

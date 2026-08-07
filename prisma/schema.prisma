@@ -1,0 +1,502 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Models ──────────────────────────────────────────────────────────────────
+
+model User {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  password       String
+  name           String
+  role           String    @default("ADMIN")
+  avatar         String?
+  phone          String?
+  isActive       Boolean   @default(true)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  client               Client?
+  assignedTasks        Task[]            @relation("AssignedTo")
+  createdTasks         Task[]            @relation("CreatedTasks")
+  attorneyCases        Case[]            @relation("AttorneyCases")
+  appointmentAttorney  Appointment[]     @relation("AppointmentAttorney")
+  articles             Article[]
+  documentsUploaded    Document[]        @relation("UploadedBy")
+  notes                Note[]
+  auditLogs            AuditLog[]
+  notifications        Notification[]
+  seedTasks            SeedTask[]        @relation("SeedTaskAuthor")
+
+  @@index([email])
+  @@index([role])
+}
+
+model Client {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  nationalId      String?
+  fatherName      String?
+  birthDate       DateTime?
+  occupation      String?
+  address         String?
+  city            String?
+  province        String?
+  postalCode      String?
+  emergencyContact String?
+  emergencyPhone  String?
+  tags            String?
+  notes           String?
+  isArchived      Boolean   @default(false)
+
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  cases           Case[]
+  appointments    Appointment[]
+  documents       Document[]
+  tasks           Task[]
+  invoices        Invoice[]
+  communicationLogs CommunicationLog[]
+  clientNotes     Note[]
+
+  @@index([userId])
+  @@index([nationalId])
+  @@index([isArchived])
+}
+
+model Case {
+  id              String      @id @default(cuid())
+  title           String
+  caseNumber      String?
+  referenceNumber String?
+  description     String?
+  practiceArea    String?
+  court           String?
+  branch          String?
+  judgeName       String?
+  opposingParty   String?
+  clientId        String
+  attorneyId      String
+  status          String      @default("OPEN")
+  priority        String      @default("LOW")
+  openingDate     DateTime    @default(now())
+  closingDate     DateTime?
+  nextDeadline    DateTime?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  client          Client      @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  attorney        User        @relation("AttorneyCases", fields: [attorneyId], references: [id], onDelete: Cascade)
+  timeline        CaseTimeline[]
+  tasks           Task[]
+  documents       Document[]
+  invoices        Invoice[]
+  communicationLogs CommunicationLog[]
+  caseNotes       Note[]
+
+  @@index([clientId])
+  @@index([attorneyId])
+  @@index([status])
+  @@index([practiceArea])
+  @@index([caseNumber])
+}
+
+model CaseTimeline {
+  id          String   @id @default(cuid())
+  caseId      String
+  title       String
+  description String?
+  eventDate   DateTime @default(now())
+  eventType   String?
+  createdAt   DateTime @default(now())
+
+  case        Case     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+}
+
+model Task {
+  id           String    @id @default(cuid())
+  title        String
+  description  String?
+  priority     String    @default("LOW")
+  dueDate      DateTime?
+  reminderDate DateTime?
+  isCompleted  Boolean   @default(false)
+  caseId       String?
+  clientId     String?
+  assignedToId String?
+  createdById  String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  case         Case?     @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  client       Client?   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  assignedTo   User?     @relation("AssignedTo", fields: [assignedToId], references: [id], onDelete: SetNull)
+  createdBy    User?     @relation("CreatedTasks", fields: [createdById], references: [id], onDelete: SetNull)
+
+  @@index([caseId])
+  @@index([clientId])
+  @@index([assignedToId])
+  @@index([isCompleted])
+  @@index([dueDate])
+}
+
+model Appointment {
+  id              String    @id @default(cuid())
+  title           String
+  description     String?
+  appointmentDate DateTime
+  duration        Int       @default(60)
+  type            String    @default("OFFICE")
+  status          String    @default("SCHEDULED")
+  clientId        String?
+  attorneyId      String?
+  notes           String?
+  createdAt       DateTime  @default(now())
+
+  client          Client?   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  attorney        User?     @relation("AppointmentAttorney", fields: [attorneyId], references: [id], onDelete: Cascade)
+
+  @@index([clientId])
+  @@index([attorneyId])
+  @@index([appointmentDate])
+  @@index([status])
+}
+
+model Document {
+  id             String   @id @default(cuid())
+  title          String
+  fileName       String
+  filePath       String
+  fileSize       Int?
+  fileType       String?
+  mimeType       String?
+  category       String?
+  description    String?
+  caseId         String?
+  clientId       String?
+  uploadedById   String?
+  isConfidential Boolean  @default(false)
+  createdAt      DateTime @default(now())
+
+  case           Case?    @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  client         Client?  @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  uploadedBy     User?    @relation("UploadedBy", fields: [uploadedById], references: [id], onDelete: SetNull)
+
+  @@index([caseId])
+  @@index([clientId])
+  @@index([uploadedById])
+  @@index([category])
+  @@index([isConfidential])
+}
+
+model Article {
+  id          String    @id @default(cuid())
+  titleEn     String
+  titleFa     String
+  slug        String    @unique
+  contentEn   String?
+  contentFa   String?
+  excerptEn   String?
+  excerptFa   String?
+  coverImage  String?
+  category    String?
+  tags        String?
+  authorId    String?
+  status      String    @default("DRAFT")
+  viewCount   Int       @default(0)
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  author      User?     @relation(fields: [authorId], references: [id], onDelete: SetNull)
+
+  @@index([slug])
+  @@index([status])
+  @@index([category])
+  @@index([authorId])
+}
+
+model Service {
+  id            String   @id @default(cuid())
+  titleEn       String
+  titleFa       String
+  slug          String   @unique
+  descriptionEn String?
+  descriptionFa String?
+  icon          String?
+  category      String?
+  features      String?
+  isActive      Boolean  @default(true)
+  sortOrder     Int      @default(0)
+  createdAt     DateTime @default(now())
+
+  @@index([slug])
+  @@index([isActive])
+  @@index([sortOrder])
+}
+
+model FAQ {
+  id         String   @id @default(cuid())
+  questionEn String
+  questionFa String
+  answerEn   String
+  answerFa   String
+  category   String?
+  sortOrder  Int      @default(0)
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+
+  @@index([isActive])
+  @@index([sortOrder])
+  @@index([category])
+}
+
+model Invoice {
+  id            String   @id @default(cuid())
+  invoiceNumber String   @unique
+  clientId      String
+  caseId        String?
+  amount        Float
+  tax           Float    @default(0)
+  total         Float
+  description   String?
+  status        String   @default("DRAFT")
+  issuedAt      DateTime @default(now())
+  dueAt         DateTime?
+  paidAt        DateTime?
+  createdAt     DateTime @default(now())
+
+  client        Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  case          Case?    @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  payments      Payment[]
+
+  @@index([clientId])
+  @@index([caseId])
+  @@index([status])
+  @@index([invoiceNumber])
+}
+
+model Payment {
+  id            String   @id @default(cuid())
+  invoiceId     String
+  amount        Float
+  paymentDate   DateTime @default(now())
+  paymentMethod String?
+  referenceNumber String?
+  notes         String?
+  createdAt     DateTime @default(now())
+
+  invoice       Invoice  @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+
+  @@index([invoiceId])
+}
+
+model ContactMessage {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  phone       String?
+  subject     String?
+  message     String
+  practiceArea String?
+  status      String   @default("NEW")
+  createdAt   DateTime @default(now())
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model Newsletter {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  name           String?
+  isActive       Boolean   @default(true)
+  subscribedAt   DateTime  @default(now())
+  unsubscribedAt DateTime?
+
+  @@index([email])
+  @@index([isActive])
+}
+
+model Note {
+  id        String   @id @default(cuid())
+  title     String
+  content   String
+  caseId    String?
+  clientId  String?
+  authorId  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  case      Case?    @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  client    Client?  @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  author    User?    @relation(fields: [authorId], references: [id], onDelete: SetNull)
+
+  @@index([caseId])
+  @@index([clientId])
+  @@index([authorId])
+}
+
+model CommunicationLog {
+  id             String   @id @default(cuid())
+  clientId       String?
+  caseId         String?
+  type           String   @default("CALL")
+  direction      String   @default("INBOUND")
+  subject        String?
+  content        String?
+  contactPerson  String?
+  loggedAt       DateTime @default(now())
+  createdAt      DateTime @default(now())
+
+  client         Client?  @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  case           Case?    @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([clientId])
+  @@index([caseId])
+  @@index([type])
+  @@index([loggedAt])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  action     String
+  entity     String
+  entityId   String?
+  oldValues  String?
+  newValues  String?
+  ipAddress  String?
+  userAgent  String?
+  createdAt  DateTime @default(now())
+
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([entity])
+  @@index([entityId])
+  @@index([createdAt])
+}
+
+model Setting {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  value       String?
+  category    String?
+  description String?
+  updatedAt   DateTime @updatedAt
+
+  @@index([key])
+  @@index([category])
+}
+
+model LegalResource {
+  id               String   @id @default(cuid())
+  titleEn          String
+  titleFa          String
+  slug             String   @unique
+  contentEn        String?
+  contentFa        String?
+  category         String?
+  subCategory      String?
+  lawReference     String?
+  articleNumber    String?
+  relatedResources String?
+  isActive         Boolean  @default(true)
+  createdAt        DateTime @default(now())
+
+  @@index([slug])
+  @@index([category])
+  @@index([isActive])
+  @@index([lawReference])
+}
+
+model CourtDecision {
+  id               String   @id @default(cuid())
+  titleEn          String
+  titleFa          String
+  slug             String   @unique
+  contentEn        String?
+  contentFa        String?
+  courtType        String?
+  caseNumber       String?
+  decisionDate     DateTime?
+  topics           String?
+  keywords         String?
+  relatedDecisions String?
+  createdAt        DateTime @default(now())
+
+  @@index([slug])
+  @@index([courtType])
+  @@index([decisionDate])
+  @@index([topics])
+}
+
+model LegalTemplate {
+  id            String   @id @default(cuid())
+  titleEn       String
+  titleFa       String
+  slug          String   @unique
+  descriptionEn String?
+  descriptionFa String?
+  category      String?
+  content       String?
+  variables     String?
+  isActive      Boolean  @default(true)
+  downloadCount Int      @default(0)
+  createdAt     DateTime @default(now())
+
+  @@index([slug])
+  @@index([category])
+  @@index([isActive])
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String
+  message   String
+  type      String   @default("INFO")
+  isRead    Boolean  @default(false)
+  link      String?
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([isRead])
+  @@index([createdAt])
+}
+
+model SearchIndex {
+  id        String   @id @default(cuid())
+  entity    String
+  entityId  String
+  title     String
+  content   String?
+  language  String   @default("en")
+  boost     Float    @default(1.0)
+  updatedAt DateTime @updatedAt
+
+  @@unique([entity, entityId])
+  @@index([entity])
+  @@index([language])
+  @@index([title])
+}
+
+// ─── Seed Helper Model ───────────────────────────────────────────────────────
+
+model SeedTask {
+  id        String   @id @default(cuid())
+  title     String
+  authorId  String?
+  createdAt DateTime @default(now())
+
+  author    User?    @relation("SeedTaskAuthor", fields: [authorId], references: [id], onDelete: SetNull)
+}

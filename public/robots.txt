@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /auth/
+Disallow: /portal/
+Disallow: /admin/
+
+Sitemap: https://vakilahmadzadeh.ir/sitemap.xml
