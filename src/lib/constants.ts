@@ -15,7 +15,8 @@ export const CONTACT_INFO = {
   workingHours: 'شنبه تا چهارشنبه ۹ الی ۱۷',
   workingHoursEn: 'Saturday - Wednesday, 9 AM - 5 PM',
   instagram: 'https://instagram.com/vakilahmadzadeh',
-  whatsapp: 'https://wa.me/989357770066',
+  whatsapp: 'https://wa.me/vakilahmadzadeh',
+  telegram: 'https://t.me/vakilahmadzadeh',
   eitaa: 'https://eitaa.com/vakilahmadzadeh',
   baleh: 'https://ble.ir/vakli\u200Cahmadzadeh',
 };
