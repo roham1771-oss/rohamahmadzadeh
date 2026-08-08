@@ -10,7 +10,10 @@ export const metadata: Metadata = {
   keywords: ['وکیل', 'وکیل دادگستری', 'مشاوره حقوقی', 'رهام احمدزاده', 'دفتر وکالت'],
   authors: [{ name: 'Roham Ahmadzadeh' }],
   creator: 'Roham Ahmadzadeh',
-  metadataBase: new URL(process.env.SITE_URL || 'https://vakilahmadzadeh.ir'),
+  metadataBase: new URL(process.env.SITE_URL || 'https://rohamahmadzadeh.ir'),
+  other: {
+    'google-site-verification': 'THFEOoY2uCvDN2pgnrDWkbeiimP-2GIsugSl9WDRYoA',
+  },
   openGraph: {
     type: 'website',
     locale: 'fa_IR',
