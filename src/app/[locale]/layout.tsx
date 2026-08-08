@@ -36,6 +36,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <html lang={params.locale} dir={rtl ? 'rtl' : 'ltr'} suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="THFEOoY2uCvDN2pgnrDWkbeiimP-2GIsugSl9WDRYoA" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {params.locale === 'fa' && (
