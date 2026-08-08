@@ -31,6 +31,9 @@ export async function generateStaticParams() {
     { slug: 'new-mehrieh-law-1404' },
     { slug: 'new-tax-law-1404' },
     { slug: 'commercial-law-reforms-1404' },
+    { slug: 'check-dishonor-law' },
+    { slug: 'identity-fraud-warning' },
+    { slug: 'rental-contract-1405' },
   ];
 }
 
@@ -247,6 +250,201 @@ The new law requires four types of commercial books: daily book, ledger, asset b
 ## Legal Consultation
 
 For more information about commercial law reforms, contact Ahmadzadeh Law Office.`,
+  },
+  'check-dishonor-law': {
+    titleFa: 'ابطال چک تضمینی؛ قوانین و نکات مهم',
+    titleEn: 'Dishonored Guaranteed Checks: Laws and Key Points',
+    category: 'کیفری',
+    publishedAt: '2025-08-07',
+    excerptFa: 'بررسی پذیرش دعوای ابطال چک تضمینی در دیوان عالی کشور و نکات مهم حقوقی برای دارندگان چک.',
+    excerptEn: 'Analysis of dishonored guaranteed check claims in the Supreme Court and important legal points for check holders.',
+    contentFa: `اخیراً دیوان عالی کشور به بررسی «پذیرش دعوای ابطال چک تضمینی» پرداخته است. این موضوع برای بسیاری از شهروندان و تجار اهمیت زیادی دارد.
+
+## چک تضمینی چیست؟
+
+چک تضمینی چکی است که بانک پرداخت وجه آن را تضمین کرده است. در این نوع چک، بانک متعهد می‌شود که وجه چک را در سررسید پرداخت کند، حتی اگر حساب صاحب چک موجودی کافی نداشته باشد.
+
+## دعوای ابطال چک تضمینی
+
+### شرایط طرح دعوا
+- در صورتی که چک جعلی باشد
+- در صورتی که چک بدون مجوز صادر شده باشد
+- در صورتی که چک در شرایط اکراه یا اجبار صادر شده باشد
+
+### مرجع صالح
+دعوای ابطال چک تضمینی در دادگاه عمومی حقوقی قابل طرح است.
+
+## نکات مهم حقوقی
+
+- چک تضمینی دارای اعتبار بالاتری نسبت به چک عادی است
+- بانک مسئول پرداخت وجه چک تضمینی است
+- ابطال چک تضمینی نیاز به دلایل محکم دارد
+- در صورت اثبات جعل، امکان تعقیب کیفری وجود دارد
+
+## مشاوره حقوقی
+
+در صورت مواجهه با مشکلات مربوط به چک تضمینی، با دفتر وکالت احمدزاده تماس بگیرید.`,
+    contentEn: `The Supreme Court has recently reviewed "acceptance of dishonored guaranteed check claims." This issue is very important for many citizens and businesses.
+
+## What is a Guaranteed Check?
+
+A guaranteed check is a check whose payment has been guaranteed by the bank. The bank commits to paying the check amount even if the account holder doesn't have sufficient funds.
+
+## Dishonor Lawsuit
+
+### Conditions for filing a lawsuit
+- If the check is forged
+- If the check was issued without authorization
+- If the check was issued under coercion
+
+## Important Legal Points
+
+- Guaranteed checks have higher credibility than regular checks
+- The bank is responsible for paying guaranteed checks
+- Dishonoring a guaranteed check requires strong evidence
+- If forgery is proven, criminal prosecution is possible
+
+## Legal Consultation
+
+For issues related to guaranteed checks, contact Ahmadzadeh Law Office.`,
+  },
+  'identity-fraud-warning': {
+    titleFa: 'هشدار: شگردهای جدید جعل هویت و کلاهبرداری',
+    titleEn: 'Warning: New Identity Fraud and Scam Techniques',
+    category: 'کیفری',
+    publishedAt: '2025-08-07',
+    excerptFa: 'هشدار وکلای دادگستری درباره شگردهای جدید باندهای جعل هویت و نحوه محافظت از اطلاعات شخصی.',
+    excerptEn: 'Warning from lawyers about new identity fraud techniques and how to protect your personal information.',
+    contentFa: `اخیراً وکلای دادگستری نسبت به شگردهای جدید باندهای جعل هویت هشدار داده‌اند. این باندها از روش‌های پیشرفته‌ای برای سرقت اطلاعات و کلاهبرداری استفاده می‌کنند.
+
+## شگردهای رایج جعل هویت
+
+### ۱. تماس تلفنی جعلی
+- معرفی خود به عنوان مأمور بانک یا پلیس
+- درخواست اطلاعات حساب بانکی
+- ارسال لینک‌های جعلی از طریق پیامک
+
+### ۲. سرقت اسناد هویتی
+- عکسبرداری از کارت ملی و شناسنامه
+- استفاده از اسناد دزدی برای افتتاح حساب
+- اخذ وام و تسهیلات به نام دیگران
+
+### ۳. کلاهبرداری اینترنتی
+- سایت‌های جعلی فروشگاهی
+- ایمیل‌های فیشینگ
+- اپلیکیشن‌های آلوده
+
+## نکات مهم برای محافظت
+
+- اطلاعات کارت ملی و شناسنامه را در اختیار دیگران قرار ندهید
+- رمزهای عبور قوی و متفاوت استفاده کنید
+- از لینک‌های مشکوک کلیک نکنید
+- معاملات مشکوک را به پلیس گزارش دهید
+
+## در صورت وقوع جرم
+
+- سریعاً به پلیس آگاهی مراجعه کنید
+- شکایت کیفری تنظیم کنید
+- از وکیل مجرب برای پیگیری پرونده استفاده کنید
+
+## مشاوره حقوقی
+
+برای اطلاع از نحوه پیگیری پرونده‌های جعل و کلاهبرداری، با دفتر وکالت احمدزاده تماس بگیرید.`,
+    contentEn: `Lawyers have recently warned about new identity fraud techniques used by criminal networks. These networks use advanced methods for data theft and fraud.
+
+## Common Identity Fraud Techniques
+
+### 1. Fake Phone Calls
+- Posing as bank officials or police
+- Requesting bank account information
+- Sending phishing links via SMS
+
+### 2. Document Theft
+- Photographing national ID cards
+- Using stolen documents to open accounts
+- Obtaining loans in other people's names
+
+### 3. Online Fraud
+- Fake e-commerce websites
+- Phishing emails
+- Malicious applications
+
+## Protection Tips
+
+- Don't share ID card information with others
+- Use strong, different passwords
+- Don't click on suspicious links
+- Report suspicious transactions to police
+
+## Legal Consultation
+
+For information about pursuing fraud cases, contact Ahmadzadeh Law Office.`,
+  },
+  'rental-contract-1405': {
+    titleFa: 'تمدید خودکار قراردادهای اجاره در سال ۱۴۰۵',
+    titleEn: 'Automatic Renewal of Rental Contracts in 1405',
+    category: 'ملکی',
+    publishedAt: '2025-08-05',
+    excerptFa: 'مصوبه سران قوا درخصوص تمدید خودکار قراردادهای اجاره املاک مسکونی در سال ۱۴۰۵ و نکات مهم آن.',
+    excerptEn: 'Government heads resolution on automatic renewal of residential rental contracts in 1405 and key points.',
+    contentFa: `سران قوا مصوبه‌ای در خصوص تمدید خودکار قراردادهای اجاره املاک مسکونی در سال ۱۴۰۵ تصویب کرده‌اند. این مصوبه تأثیرات مهمی بر روابط موجر و مستأجر دارد.
+
+## خلاصه مصوبه
+
+- قراردادهای اجاره مسکونی به صورت خودکار تمدید می‌شوند
+- افزایش اجاره‌بها تابع سقف تعیین شده توسط دولت است
+- موجر نمی‌تواند بدون دلیل موجه قرارداد را فسخ کند
+
+## نکات مهم برای موجرین
+
+- رعایت سقف افزایش اجاره الزامی است
+- امکان تخلیه فقط در صورت وجود دلیل قانونی
+- تخلف از مصوبه مجازات‌های اداری دارد
+
+## نکات مهم برای مستأجرین
+
+- حق داشتن قرارداد رسمی
+- حفاظت از حق اقامت تا پایان مدت قرارداد
+- امکان شکایت در صورت تخلف موجر
+
+## در صورت اختلاف
+
+- ابتدا سعی در سازش کنید
+- در صورت عدم توافق، به شورای حل اختلاف مراجعه کنید
+- از وکیل مجرب برای دفاع از حقوق خود استفاده کنید
+
+## مشاوره حقوقی
+
+برای اطلاع از جزئیات بیشتر مصوبه اجاره و نحوه تنظیم قرارداد، با دفتر وکالت احمدزاده تماس بگیرید.`,
+    contentEn: `The government heads have approved a resolution on automatic renewal of residential rental contracts in 1405. This resolution has significant impacts on landlord-tenant relations.
+
+## Summary of Resolution
+
+- Residential rental contracts are automatically renewed
+- Rent increases are subject to government-set ceilings
+- Landlords cannot terminate contracts without valid reasons
+
+## Key Points for Landlords
+
+- Adherence to rent increase ceilings is mandatory
+- Eviction is only possible with legal grounds
+- Violations result in administrative penalties
+
+## Key Points for Tenants
+
+- Right to have an official contract
+- Protection of residence rights until contract end
+- Right to complain in case of landlord violations
+
+## In Case of Disputes
+
+- Try to reach an agreement first
+- If no agreement, refer to Dispute Resolution Council
+- Use an experienced lawyer to defend your rights
+
+## Legal Consultation
+
+For more information about the rental resolution and contract drafting, contact Ahmadzadeh Law Office.`,
   },
 };
 

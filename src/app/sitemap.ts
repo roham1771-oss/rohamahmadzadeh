@@ -10,6 +10,7 @@ const articles = [
   'criminal-law-intro', 'family-law-iran', 'property-disputes',
   'online-legal-consultation', 'labor-laws', 'commercial-contracts',
   'new-mehrieh-law-1404', 'new-tax-law-1404', 'commercial-law-reforms-1404',
+  'check-dishonor-law', 'identity-fraud-warning', 'rental-contract-1405',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
