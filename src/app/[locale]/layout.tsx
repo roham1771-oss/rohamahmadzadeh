@@ -25,6 +25,9 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
     keywords: seo.keywords || '',
     openGraph: {
       locale: params.locale === 'fa' ? 'fa_IR' : 'en_US',
+      title: seo.title || '',
+      description: seo.description || '',
+      siteName: dict.common?.siteName || '',
     },
   };
 }
