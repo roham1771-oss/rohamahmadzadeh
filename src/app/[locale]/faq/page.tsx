@@ -3,6 +3,7 @@ import { type Locale } from '@/i18n/config';
 import { generateSEO } from '@/lib/seo';
 import { Breadcrumbs } from '@/components/shared/Breadcrumbs';
 import { FAQAccordion } from '@/components/shared/FAQAccordion';
+import { JsonLd } from '@/components/shared/JsonLd';
 
 interface FAQPageProps { params: { locale: Locale }; }
 
@@ -27,6 +28,14 @@ export default async function FAQPage({ params }: FAQPageProps) {
 
   return (
     <div className="page-transition">
+      <JsonLd type="FAQPage" data={{ questions: faqs.map(f => ({
+        question: params.locale === 'fa' ? f.questionFa : f.questionEn,
+        answer: params.locale === 'fa' ? f.answerFa : f.answerEn,
+      }))}} />
+      <JsonLd type="BreadcrumbList" data={{ items: [
+        { name: params.locale === 'fa' ? 'خانه' : 'Home', url: 'https://rohamahmadzadeh.ir' },
+        { name: params.locale === 'fa' ? 'سوالات متداول' : 'FAQ', url: `https://rohamahmadzadeh.ir/${params.locale}/faq` },
+      ]}} />
       <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-950 dark:from-primary-950 dark:via-primary-900 dark:to-primary-950 py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-accent-500 rounded-full blur-3xl" />

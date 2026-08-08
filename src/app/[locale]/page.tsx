@@ -7,6 +7,7 @@ import { WhyUsSection } from '@/components/sections/WhyUsSection';
 import { CTASection } from '@/components/sections/CTASection';
 import { LatestArticles } from '@/components/sections/LatestArticles';
 import { generateSEO } from '@/lib/seo';
+import { JsonLd } from '@/components/shared/JsonLd';
 
 interface HomePageProps {
   params: { locale: Locale };
@@ -39,6 +40,11 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <div className="page-transition">
+      <JsonLd type="LegalService" />
+      <JsonLd type="Person" />
+      <JsonLd type="BreadcrumbList" data={{ items: [
+        { name: params.locale === 'fa' ? 'خانه' : 'Home', url: params.locale === 'fa' ? 'https://rohamahmadzadeh.ir' : 'https://rohamahmadzadeh.ir/en' },
+      ]}} />
       <HeroSection dict={dict} locale={params.locale} />
       <StatsSection dict={dict} locale={params.locale} />
       <ServicesPreview dict={dict} locale={params.locale} services={services} />

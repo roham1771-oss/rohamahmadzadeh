@@ -1,6 +1,6 @@
 export const SITE_NAME = 'دفتر وکالت احمدزاده';
 export const SITE_NAME_EN = 'Ahmadzadeh Law Office';
-export const SITE_URL = process.env.SITE_URL || 'https://vakilahmadzadeh.ir';
+export const SITE_URL = process.env.SITE_URL || 'https://rohamahmadzadeh.ir';
 export const SITE_DESCRIPTION = 'دفتر وکالت احمدزاده - رهام احمدزاده وکیل پایه یک دادگستری';
 export const SITE_DESCRIPTION_EN = 'Ahmadzadeh Law Office - Attorney at Law';
 

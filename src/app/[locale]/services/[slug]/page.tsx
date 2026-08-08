@@ -1,9 +1,24 @@
 import { getDictionary } from '@/i18n/dictionaries';
 import { type Locale } from '@/i18n/config';
 import { Breadcrumbs } from '@/components/shared/Breadcrumbs';
+import { JsonLd } from '@/components/shared/JsonLd';
+import { generateSEO } from '@/lib/seo';
 import Link from 'next/link';
 
 interface ServiceDetailPageProps { params: { locale: Locale; slug: string }; }
+
+export async function generateMetadata({ params }: ServiceDetailPageProps) {
+  const service = services[params.slug];
+  if (!service) return {};
+  const title = params.locale === 'fa' ? service.titleFa : service.titleEn;
+  const desc = params.locale === 'fa' ? service.descriptionFa : service.descriptionEn;
+  return generateSEO({
+    title,
+    description: desc.slice(0, 160),
+    url: `/services/${params.slug}`,
+    locale: params.locale,
+  });
+}
 
 export async function generateStaticParams() {
   return [
@@ -35,6 +50,12 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
 
   return (
     <div className="page-transition">
+      <JsonLd type="LegalService" />
+      <JsonLd type="BreadcrumbList" data={{ items: [
+        { name: params.locale === 'fa' ? 'خانه' : 'Home', url: 'https://rohamahmadzadeh.ir' },
+        { name: params.locale === 'fa' ? 'خدمات' : 'Services', url: `https://rohamahmadzadeh.ir/${params.locale}/services` },
+        { name: title, url: `https://rohamahmadzadeh.ir/${params.locale}/services/${params.slug}` },
+      ]}} />
       <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-950 dark:from-primary-950 dark:via-primary-900 dark:to-primary-950 py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-accent-500 rounded-full blur-3xl" />
