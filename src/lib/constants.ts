@@ -7,8 +7,6 @@ export const SITE_DESCRIPTION_EN = 'Ahmadzadeh Law Office - Attorney at Law';
 export const CONTACT_INFO = {
   phone: '۰۹۳۵۷۷۷۰۰۶۶',
   phoneEn: '09357770066',
-  mobile: '۰۹۱۲۷۷۷۰۷۸۶',
-  mobileEn: '09127770786',
   email: 'vakilahmadzadeh@gmail.com',
   address: 'کرج، میدان معلم، ابتدای خیابان درختی، پلاک ۳۶۵، ساختمان ۱۱۷، واحد ۴',
   addressEn: 'No. 365, Building 117, Unit 4, Start of Darakhti St., Meidan-e Maaref, Karaj',

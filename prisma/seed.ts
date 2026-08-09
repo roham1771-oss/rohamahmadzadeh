@@ -286,12 +286,6 @@ async function main() {
       description: "Primary contact phone (office)",
     },
     {
-      key: "contact_mobile",
-      value: "09127770786",
-      category: "contact",
-      description: "Mobile phone",
-    },
-    {
       key: "office_address",
       value: "کرج، میدان معلم، ابتدای خیابان درختی، پلاک ۳۶۵، ساختمان ۱۱۷، واحد ۴",
       category: "contact",
