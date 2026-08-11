@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/constants';
+import { laws } from '@/data/lawsData';
 
 const services = [
   'civil', 'criminal', 'family', 'commercial', 'property',
@@ -100,6 +101,59 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     });
+  }
+
+  for (const law of laws) {
+    entries.push({
+      url: `${baseUrl}/fa/laws/${law.slug}`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: {
+        languages: {
+          'fa': `${baseUrl}/fa/laws/${law.slug}`,
+          'en': `${baseUrl}/en/laws/${law.slug}`,
+        },
+      },
+    });
+    entries.push({
+      url: `${baseUrl}/en/laws/${law.slug}`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: {
+        languages: {
+          'fa': `${baseUrl}/fa/laws/${law.slug}`,
+          'en': `${baseUrl}/en/laws/${law.slug}`,
+        },
+      },
+    });
+    for (const article of law.articles) {
+      entries.push({
+        url: `${baseUrl}/fa/laws/${law.slug}/${article.number}`,
+        lastModified,
+        changeFrequency: 'monthly',
+        priority: 0.5,
+        alternates: {
+          languages: {
+            'fa': `${baseUrl}/fa/laws/${law.slug}/${article.number}`,
+            'en': `${baseUrl}/en/laws/${law.slug}/${article.number}`,
+          },
+        },
+      });
+      entries.push({
+        url: `${baseUrl}/en/laws/${law.slug}/${article.number}`,
+        lastModified,
+        changeFrequency: 'monthly',
+        priority: 0.5,
+        alternates: {
+          languages: {
+            'fa': `${baseUrl}/fa/laws/${law.slug}/${article.number}`,
+            'en': `${baseUrl}/en/laws/${law.slug}/${article.number}`,
+          },
+        },
+      });
+    }
   }
 
   return entries;

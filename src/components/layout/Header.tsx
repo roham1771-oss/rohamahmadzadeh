@@ -20,6 +20,7 @@ const navItems = (dict: any) => [
   { href: '/about', label: dict?.nav?.about || 'About' },
   { href: '/services', label: dict?.nav?.services || 'Services' },
   { href: '/articles', label: dict?.nav?.articles || 'Articles' },
+  { href: '/laws', label: dict?.nav?.laws || 'Laws' },
   { href: '/faq', label: dict?.nav?.faq || 'FAQ' },
   { href: '/contact', label: dict?.nav?.contact || 'Contact' },
 ];

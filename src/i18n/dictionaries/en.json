@@ -71,6 +71,7 @@
     "contact": "Contact Us",
     "faq": "FAQ",
     "calculators": "Calculators",
+    "laws": "Laws",
     "legalAid": "Legal Consultation",
     "clientPortal": "Client Portal"
   },
@@ -318,6 +319,14 @@
     "nationalId": "Invalid national ID",
     "minChars": "Minimum {min} characters required",
     "maxChars": "Maximum {max} characters allowed"
+  },
+  "popup": {
+    "title": "Need Legal Consultation?",
+    "subtitle": "If you need guidance about your case or legal matter, you can contact us.",
+    "callButton": "Call the Lawyer",
+    "continueButton": "Continue Browsing",
+    "note": "Available during business hours",
+    "close": "Close"
   },
   "errors": {
     "notFound": "Page not found",

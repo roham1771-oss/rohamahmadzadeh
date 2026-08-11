@@ -5,6 +5,7 @@ import { Providers } from '@/providers/Providers';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CookieConsent } from '@/components/shared/CookieConsent';
+import { LawyerContactPopup } from '@/components/shared/LawyerContactPopup';
 import { Toaster } from 'react-hot-toast';
 
 export async function generateStaticParams() {
@@ -55,6 +56,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           <main className="flex-1">{children}</main>
           <Footer dict={dict} locale={params.locale} />
           <CookieConsent dict={dict} />
+          <LawyerContactPopup dict={dict} />
           <Toaster
             position={rtl ? 'top-left' : 'top-right'}
             toastOptions={{
