@@ -12,6 +12,7 @@ const articles = [
   'online-legal-consultation', 'labor-laws', 'commercial-contracts',
   'new-mehrieh-law-1404', 'new-tax-law-1404', 'commercial-law-reforms-1404',
   'check-dishonor-law', 'identity-fraud-warning', 'rental-contract-1405',
+  'forged-document-property-transfer',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -112,19 +113,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           'fa': `${baseUrl}/fa/laws/${law.slug}`,
-          'en': `${baseUrl}/en/laws/${law.slug}`,
-        },
-      },
-    });
-    entries.push({
-      url: `${baseUrl}/en/laws/${law.slug}`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-      alternates: {
-        languages: {
-          'fa': `${baseUrl}/fa/laws/${law.slug}`,
-          'en': `${baseUrl}/en/laws/${law.slug}`,
         },
       },
     });
@@ -137,19 +125,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: {
             'fa': `${baseUrl}/fa/laws/${law.slug}/${article.number}`,
-            'en': `${baseUrl}/en/laws/${law.slug}/${article.number}`,
-          },
-        },
-      });
-      entries.push({
-        url: `${baseUrl}/en/laws/${law.slug}/${article.number}`,
-        lastModified,
-        changeFrequency: 'monthly',
-        priority: 0.5,
-        alternates: {
-          languages: {
-            'fa': `${baseUrl}/fa/laws/${law.slug}/${article.number}`,
-            'en': `${baseUrl}/en/laws/${law.slug}/${article.number}`,
           },
         },
       });

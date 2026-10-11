@@ -1,6 +1,7 @@
 import { getDictionary } from '@/i18n/dictionaries';
 import { type Locale } from '@/i18n/config';
 import { Breadcrumbs } from '@/components/shared/Breadcrumbs';
+import { ShareButtons } from '@/components/shared/ShareButtons';
 import { JsonLd } from '@/components/shared/JsonLd';
 import { generateSEO } from '@/lib/seo';
 import Link from 'next/link';
@@ -34,6 +35,7 @@ export async function generateStaticParams() {
     { slug: 'check-dishonor-law' },
     { slug: 'identity-fraud-warning' },
     { slug: 'rental-contract-1405' },
+    { slug: 'forged-document-property-transfer' },
   ];
 }
 
@@ -446,6 +448,125 @@ For information about pursuing fraud cases, contact Ahmadzadeh Law Office.`,
 
 For more information about the rental resolution and contract drafting, contact Ahmadzadeh Law Office.`,
   },
+  'forged-document-property-transfer': {
+    titleFa: 'استفاده از سند مجعول جزئی از عنصر مادی انتقال مال غیر است',
+    titleEn: 'Use of Forged Documents as Part of the Crime of Transferring Third-Party Property',
+    category: 'کیفری',
+    publishedAt: '2026-10-06',
+    excerptFa: 'رأی وحدت رویه دیوان عالی کشور: استفاده از سند مجعول برای انتقال مال غیر جزئی از عنصر مادی بزه است و مرتکب به مجازات اشد محکوم می‌شود.',
+    excerptEn: 'Supreme Court ruling: using forged documents to transfer third-party property is part of the material element of the crime, and the offender receives the harshest penalty.',
+    contentFa: `رئیس دیوان عالی کشور در جلسه هیات عمومی مورخ ۱۴۰۵/۷/۱۴ با ارائه گزارش پرونده اصراری کیفری، رای شعبه هفدهم دیوان عالی کشور را تأیید و استفاده از سند مجعول را جزئی از عنصر مادی بزه انتقال مال غیر دانست. این تصمیم یکی از مهم‌ترین رویه‌های قضایی اخیر در حوزه جعل اسناد و کلاهبرداری ملکی است.
+
+## چه چیزی در این رأی آمده است؟
+
+به نقل از روابط عمومی دیوان عالی کشور، حجت الاسلام منتظری در جلسه هیات عمومی گزارش پرونده اصراری کیفری با موضوع جعل اسناد رسمی و استفاده از سند مجعول مربوط به شعبه هفدهم دیوان عالی کشور را به جهت اختلاف با شعبه ۱۰ دادگاه کیفری یک استان تهران مطرح کرد.
+
+پس از بحث و تبادل نظر قضات شعب کیفری، در نهایت با اکثریت اعضای حاضر در جلسه، رای شعبه هفدهم دیوان عالی کشور مورد تأیید قرار گرفت. بر این اساس:
+
+- استفاده از سند مجعول، جزئی از عنصر مادی بزه انتقال مال غیر محسوب می‌شود
+- این رفتار مشمول تعدد معنوی می‌شود
+- مرتکب طبق ماده ۱۳۱ قانون مجازات اسلامی به مجازات اشد محکوم می‌گردد
+
+## تعدد معنوی و ماده ۱۳۱ قانون مجازات اسلامی
+
+در حقوق کیفری ایران، تعدد جرائم دو نوع است: تعدد مادی و تعدد معنوی. تعدد معنوی زمانی رخ می‌دهد که یک رفتار واحد، واجد عناصر چند جرم مستقل باشد. در مورد انتقال مال غیر با سند مجعول، هرچند یک عمل واحد (فروش ملک دیگری) انجام شده، اما هم جرم جعل یا استفاده از سند مجعول و هم جرم انتقال مال غیر تحقق یافته است.
+
+مطابق ماده ۱۳۱ قانون مجازات اسلامی، در چنین حالتی مرتکب به مجازات اشد (شدیدترین مجازات از میان جرائم ارتکابی) محکوم می‌شود. رئیس دیوان عالی کشور در این باره تأکید کرد که قضات شعب هم عرض با تسریع در رفع نواقص و ابهامات پرونده، زمینه اجرای حکم قطعی را فراهم کنند.
+
+## چرا این رأی مهم است؟
+
+### تشدید برخورد با کلاهبرداران ملکی
+
+پیش از این، برخی محاکم استفاده از سند مجعول را صرفاً جرم مستقل جعل تلقی می‌کردند و مجازات سبک‌تری اعمال می‌شد. با این رأی، مرتکب همزمان دو جرم دارد و مشمول مجازات اشد می‌شود.
+
+### حمایت از مالکان واقعی املاک
+
+این رویه به مالکانی که ملکشان با اسناد جعلی منتقل شده، ابزار قوی‌تری برای پیگیری حقوقشان می‌دهد.
+
+### وحدت رویه قضایی
+
+رأی هیات عمومی دیوان عالی کشور برای تمام شعب دادگاه‌های کیفری سراسر کشور لازم‌الاجرا است و اختلاف رویه موجود را برطرف می‌کند.
+
+## عناصر تشکیل‌دهنده جرم انتقال مال غیر
+
+برای تحقق جرم انتقال مال غیر، باید سه عنصر وجود داشته باشد:
+
+1. **علم مرتکب** به اینکه مال متعلق به غیر است
+2. **عمل انتقال** مال به هر نحوی (فروش، هبه، رهن و...)
+3. **ضرر مال باخته** یا ایراد خسارت به وی
+
+وجود سند مجعول در این فرآیند، صرفاً ابزار ارتکاب جرم است، اما همین ابزار نیز به عنوان بخشی از رفتار مجرمانه، مشمول تشدید مجازات می‌شود.
+
+## نکات مهم برای خریداران املاک
+
+- استعلام وضعیت ثبتی ملک از اداره ثبت اسناد و املاک را فراموش نکنید
+- معامله با وکالت‌نامه‌های مشکوک را با احتیاط انجام دهید
+- از صدور سند رسمی جدید (تک برگ) اطمینان حاصل کنید
+- در صورت مشاهده هرگونه ادعای مالکیت متعدد، از معامله خودداری کنید
+
+## راه‌های حقوقی مالک متضرر
+
+مالکی که ملک وی با سند مجعول منتقل شده، می‌تواند:
+
+- **شکایت کیفری** به اتهام جعل و استفاده از سند مجعول و انتقال مال غیر طرح کند
+- **دعوای حقوقی** استرداد مال یا مثل آن را مطرح نماید
+- در صورت انتقال به شخص ثالث با حسن نیت، از راه‌های قانونی جبران خسارت بهره بگیرد
+
+## مشاوره حقوقی
+
+اگر با پرونده جعل سند یا انتقال مال غیر مواجه هستید، با دفتر وکالت احمدزاده تماس بگیرید. وکلای مجرب ما در کرج و تهران آماده ارائه مشاوره تخصصی و پیگیری پرونده شما هستند.`,
+    contentEn: `The Head of the Supreme Court, in the General Board meeting dated 1405/7/14 (October 6, 2026), approved the ruling of Branch 17 of the Supreme Court and held that the use of forged documents is part of the material element of the crime of transferring third-party property. This is one of the most important recent judicial precedents in the field of document forgery and property fraud.
+
+## What Does This Ruling Say?
+
+According to the Public Relations of the Supreme Court, the report of the criminal insistency case regarding forgery of official documents and use of forged documents from Branch 17 was raised due to conflict with Branch 10 of the First Instance Criminal Court of Tehran.
+
+After discussion among criminal judges, the ruling of Branch 17 was ultimately approved by majority. Accordingly:
+
+- Using forged documents is considered part of the material element of transferring third-party property
+- The conduct falls under concurrent moral offenses (taddad-e ma'nawi)
+- The offender is sentenced to the harshest punishment under Article 131 of the Islamic Penal Code
+
+## Concurrent Offenses and Article 131
+
+Under Article 131 of the Islamic Penal Code, when a single act constitutes several independent crimes, the offender receives the harshest of those punishments. In cases involving forged documents used to transfer another's property, both the forgery offense and the transfer offense are committed.
+
+## Why This Ruling Matters
+
+### Stricter Handling of Property Fraud
+Previously, some courts treated the use of forged documents as an independent, lesser offense. Under this ruling, the offender faces both crimes and receives the harshest penalty.
+
+### Protection of True Owners
+This precedent gives owners whose property was transferred via forged documents stronger legal tools.
+
+### Uniform Judicial Practice
+The General Board ruling is binding on all criminal courts across the country and resolves existing conflicts.
+
+## Elements of the Crime
+
+The crime of transferring third-party property requires three elements:
+
+1. The offender's knowledge that the property belongs to another person
+2. The act of transfer by any means (sale, gift, mortgage, etc.)
+3. Damage to the actual owner
+
+## Tips for Property Buyers
+
+- Always verify the registration status of the property
+- Be cautious with suspicious powers of attorney
+- Ensure a new official (single-sheet) deed is issued
+- Refuse the transaction if multiple ownership claims arise
+
+## Legal Remedies for Affected Owners
+
+- File a criminal complaint for forgery and transferring third-party property
+- Pursue a civil claim for restitution
+- Seek damages if the property was transferred to a bona fide third party
+
+## Legal Consultation
+
+If you are facing a document forgery or property transfer case, contact Ahmadzadeh Law Office. Our experienced lawyers in Karaj and Tehran are ready to provide specialized advice.`,
+  },
 };
 
 export default async function ArticleDetailPage({ params }: ArticleDetailPageProps) {
@@ -492,6 +613,13 @@ export default async function ArticleDetailPage({ params }: ArticleDetailPagePro
           <article className="prose prose-lg dark:prose-invert max-w-none">
             {content.split('\n').map((paragraph: string, i: number) => (paragraph.trim() && <p key={i}>{paragraph}</p>))}
           </article>
+          <div className="mt-8 border-t border-border/50 pt-6">
+            <ShareButtons
+              url={`/${params.locale}/articles/${params.slug}`}
+              title={title}
+              locale={params.locale}
+            />
+          </div>
           <div className="mt-12 text-center">
             <Link href={`/${params.locale}/articles`} className="btn-secondary">{dict?.common?.back || 'Back'} {dict?.nav?.articles || 'Articles'}</Link>
           </div>
